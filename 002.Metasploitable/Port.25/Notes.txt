@@ -1,0 +1,22 @@
+└─# smtp-user-enum -M VRFY -U ../Port.23/Username -t 192.168.1.38                                                                                                                                                                        1 ⨯
+Starting smtp-user-enum v1.2 ( http://pentestmonkey.net/tools/smtp-user-enum )
+
+ ----------------------------------------------------------
+|                   Scan Information                       |
+ ----------------------------------------------------------
+
+Mode ..................... VRFY
+Worker Processes ......... 5
+Usernames file ........... ../Port.23/Username
+Target count ............. 1
+Username count ........... 3
+Target TCP port .......... 25
+Query timeout ............ 5 secs
+Target domain ............ 
+
+######## Scan started at Sun Dec 19 00:40:29 2021 #########
+192.168.1.38: root exists
+192.168.1.38: msfadmin exists
+######## Scan completed at Sun Dec 19 00:40:29 2021 #########
+2 results.
+

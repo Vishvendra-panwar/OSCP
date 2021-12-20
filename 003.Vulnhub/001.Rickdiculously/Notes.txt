@@ -1,0 +1,35 @@
+#netdiscover -i eth0 -r 192.168.1.1/24
+
+
+ Currently scanning: Finished!   |   Screen View: Unique Hosts                                                                                                                                                                              
+                                                                                                                                                                                                                                            
+ 5 Captured ARP Req/Rep packets, from 5 hosts.   Total size: 300                                                                                                                                                                            
+ _____________________________________________________________________________
+   IP            At MAC Address     Count     Len  MAC Vendor / Hostname      
+ -----------------------------------------------------------------------------
+ 192.168.1.1     7c:a9:6b:d6:7b:90      1      60  Syrotech Networks. Ltd.                                                                                                                                                                  
+ 192.168.1.36    10:7b:44:4d:9f:65      1      60  ASUSTek COMPUTER INC.                                                                                                                                                                    
+ 192.168.1.38    08:00:27:6e:82:50      1      60  PCS Systemtechnik GmbH                                                                                                                                                                   
+ 192.168.1.41    08:00:27:bf:52:95      1      60  PCS Systemtechnik GmbH                                                                                                                                                                   
+ 192.168.1.37    48:88:ca:be:a5:6d      1      60  Motorola (Wuhan) Mobility Technologies Communication Co., Ltd.                                                                                                                           
+
+                                                                                                                                                                                                                                             
+┌──(root💀kali)-[/home/kali/001.Git/OSCP/003.Vulnhub]
+└─# nmap 192.168.1.41                                                                                                                                                                                                                  130 ⨯
+Starting Nmap 7.92 ( https://nmap.org ) at 2021-12-19 01:27 EST
+Nmap scan report for 192.168.1.41
+Host is up (0.00019s latency).
+Not shown: 996 closed tcp ports (reset)
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+9090/tcp open  zeus-admin
+MAC Address: 08:00:27:BF:52:95 (Oracle VirtualBox virtual NIC)
+
+Nmap done: 1 IP address (1 host up) scanned in 0.36 seconds
+                                                                                                                                                                                                                                             
+┌──(root💀kali)-[/home/kali/001.Git/OSCP/003.Vulnhub]
+└─#                                      
+
+

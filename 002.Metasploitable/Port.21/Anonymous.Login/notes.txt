@@ -1,0 +1,36 @@
+└─$ ftp 192.168.1.38
+Connected to 192.168.1.38.
+220 (vsFTPd 2.3.4)
+Name (192.168.1.38:kali): anonymous
+331 Please specify the password.
+Password:
+230 Login successful.
+Remote system type is UNIX.
+Using binary mode to transfer files.
+ftp> 
+ftp> 
+ftp> dir
+200 PORT command successful. Consider using PASV.
+150 Here comes the directory listing.
+226 Directory send OK.
+ftp> ?
+Commands may be abbreviated.  Commands are:
+
+!               dir             mdelete         qc              site
+$               disconnect      mdir            sendport        size
+account         exit            mget            put             status
+append          form            mkdir           pwd             struct
+ascii           get             mls             quit            system
+bell            glob            mode            quote           sunique
+binary          hash            modtime         recv            tenex
+bye             help            mput            reget           tick
+case            idle            newer           rstatus         trace
+cd              image           nmap            rhelp           type
+cdup            ipany           nlist           rename          user
+chmod           ipv4            ntrans          reset           umask
+close           ipv6            open            restart         verbose
+cr              lcd             prompt          rmdir           ?
+delete          ls              passive         runique
+debug           macdef          proxy           send
+ftp> 
+

