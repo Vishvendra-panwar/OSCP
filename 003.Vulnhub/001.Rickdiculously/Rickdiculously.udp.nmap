@@ -1,0 +1,18 @@
+# Nmap 7.92 scan initiated Sat Jan  1 09:14:45 2022 as: nmap -sU -top-ports 10 -oN Rickdiculously.udp.nmap 192.168.1.41
+Nmap scan report for 192.168.1.41
+Host is up (0.00050s latency).
+
+PORT     STATE         SERVICE
+53/udp   closed        domain
+67/udp   closed        dhcps
+123/udp  closed        ntp
+135/udp  closed        msrpc
+137/udp  open|filtered netbios-ns
+138/udp  closed        netbios-dgm
+161/udp  closed        snmp
+445/udp  closed        microsoft-ds
+631/udp  closed        ipp
+1434/udp closed        ms-sql-m
+MAC Address: 08:00:27:BF:52:95 (Oracle VirtualBox virtual NIC)
+
+# Nmap done at Sat Jan  1 09:14:57 2022 -- 1 IP address (1 host up) scanned in 12.67 seconds

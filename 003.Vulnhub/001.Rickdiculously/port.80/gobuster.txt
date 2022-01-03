@@ -1,0 +1,7 @@
+/.hta                 (Status: 403) [Size: 213]
+/.htpasswd            (Status: 403) [Size: 218]
+/.htaccess            (Status: 403) [Size: 218]
+/cgi-bin/             (Status: 403) [Size: 217]
+/index.html           (Status: 200) [Size: 326]
+/passwords            (Status: 301) [Size: 238] [--> http://192.168.1.41/passwords/]
+/robots.txt           (Status: 200) [Size: 126]
