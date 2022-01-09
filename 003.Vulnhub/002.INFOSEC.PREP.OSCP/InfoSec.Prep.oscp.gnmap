@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sat Jan  8 02:21:43 2022 as: nmap -sC -p- -A -oA InfoSec.Prep.oscp 192.168.1.37
+Host: 192.168.1.37 ()	Status: Up
+Host: 192.168.1.37 ()	Ports: 22/open/tcp//ssh//OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.4.41 ((Ubuntu))/, 33060/open/tcp//mysqlx?///	Ignored State: closed (65532)	OS: Linux 4.15 - 5.6	Seq Index: 262	IP ID Seq: All zeros
+# Nmap done at Sat Jan  8 02:22:15 2022 -- 1 IP address (1 host up) scanned in 32.15 seconds

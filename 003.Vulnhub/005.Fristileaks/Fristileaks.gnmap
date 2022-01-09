@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Jan  9 02:35:15 2022 as: nmap -sC -sV -Pn -p- -A -O -n -oA Fristileaks 192.168.1.45
+Host: 192.168.1.45 ()	Status: Up
+Host: 192.168.1.45 ()	Ports: 80/open/tcp//http//Apache httpd 2.2.15 ((CentOS) DAV|2 PHP|5.3.3)/	Ignored State: filtered (65534)	OS: Linux 2.6.32 - 3.10|Linux 2.6.32 - 3.13	Seq Index: 256	IP ID Seq: All zeros
+# Nmap done at Sun Jan  9 02:37:58 2022 -- 1 IP address (1 host up) scanned in 163.54 seconds

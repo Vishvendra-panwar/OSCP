@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sat Jan  8 02:50:37 2022 as: nmap -p- -A -sC -oA Mr.robot 192.168.1.42
+Host: 192.168.1.42 ()	Status: Up
+Host: 192.168.1.42 ()	Ports: 22/closed/tcp//ssh///, 80/open/tcp//http//Apache httpd/, 443/open/tcp//ssl|http//Apache httpd/	Ignored State: filtered (65532)	OS: Linux 3.10 - 4.11	Seq Index: 261	IP ID Seq: All zeros
+# Nmap done at Sat Jan  8 02:52:40 2022 -- 1 IP address (1 host up) scanned in 123.75 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.92 scan initiated Sun Jan  9 01:38:17 2022 as: nmap -p- -sC -sV -A -oA Firstileaks 192.168.1.44
+Host: 192.168.1.44 ()	Status: Up
+Host: 192.168.1.44 ()	Ports: 22/filtered/tcp//ssh///, 80/open/tcp//http//Apache httpd 2.2.22 ((Debian))/, 3128/open/tcp//http-proxy//Squid http proxy 3.1.20/	Ignored State: closed (65532)	OS: Linux 3.2 - 3.10|Linux 3.2 - 3.16	Seq Index: 260	IP ID Seq: All zeros
+# Nmap done at Sun Jan  9 01:38:48 2022 -- 1 IP address (1 host up) scanned in 32.72 seconds

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.92 scan initiated Sun Jan  9 02:35:15 2022 as: nmap -sC -sV -Pn -p- -A -O -n -oA Fristileaks 192.168.1.45 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -Pn -p- -A -O -n -oA Fristileaks 192.168.1.45" start="1641713715" startstr="Sun Jan  9 02:35:15 2022" version="7.92" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<hosthint><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.45" addrtype="ipv4"/>
+<address addr="08:00:27:A5:A6:76" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+</hosthint>
+<host starttime="1641713716" endtime="1641713878"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="192.168.1.45" addrtype="ipv4"/>
+<address addr="08:00:27:A5:A6:76" addrtype="mac" vendor="Oracle VirtualBox virtual NIC"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65534">
+<extrareasons reason="no-response" count="65375" proto="tcp" ports="1-24,26-79,81-109,111-112,114-444,446-551,553,555-561,563-834,836-1449,1451-1496,1498-1722,1724-1931,1933-2066,2068-2356,2358-2949,2951-3209,3211-3301,3303-3534,3536-3695,3697-4145,4147-4356,4358-4737,4739-5368,5370-5445,5447-5535,5537-5648,5650-6938,6940-7530,7532-8079,8081-8091,8093-8964,8966-9127,9129-9317,9319-9430,9432-9561,9563-10177,10179-10534,10536-10646,10648-10964,10966-11076,11078-11455,11457-12938,12940-13070,13072-13367,13369-13572,13574-13709,13711-14119,14121-15130,15132-15303,15305-15743,15745-15852,15854-15917,15919-16478,16480-17139,17141-17188,17190-17687,17689-17829,17831-18059,18061-18435,18437-18940,18942-19103,19105-20023,20025-20445,20447-20507,20509-20691,20693-21244,21246-21571,21573-21723,21725-22165,22167-22266,22268-23264,23266-24177,24179-24520,24522-24879,24881-24882,24884-26836,26838-26889,26891-28264,28266-28277,28279-28563,28565-29049,29051-29592,29594-30316,30318-31247,31249-32211,32213-33339,33341-35057,35059-35194,35196-35542,35544-36019,36021-37376,37378-37416,37418-37760,37762-37831,37833-38409,38411-38534,38536-38661,38663-38786,38788-38885,38887-38933,38935-39416,39418-39467,39469-39983,39985-40086,40088-42619,42621-43815,43817-44121,44123-44255,44257-44375,44377-44794,44796-44847,44849-45235,45237-45609,45611-45905,45907-46697,46699-47534,47536-47574,47576-48494,48496-48555,48557-48687,48689-48887,48889-49260,49262-49305,49307-49506,49508-49614,49616-50684,50686-51295,51297-51755,51757-51985,51987-52183,52185-53380,53382-53459,53461-53771,53773-54280,54282-54667,54669-54982,54984-55113,55115-55123,55125-55270,55272-55550,55552-57404,57406-57497,57499-58820,58822-59606,59608-59929,59931-60492,60494-60538,60540-61592,61594-61611,61613-62465,62467-63053,63055-63604,63606-63677,63679-63989,63991-64226,64228-64388,64390-64711,64713-64995,64997-65065,65067-65535"/>
+<extrareasons reason="host-prohibited" count="159" proto="tcp" ports="25,110,113,445,552,554,562,835,1450,1497,1723,1932,2067,2357,2950,3210,3302,3535,3696,4146,4357,4738,5369,5446,5536,5649,6939,7531,8080,8092,8965,9128,9318,9431,9562,10178,10535,10647,10965,11077,11456,12939,13071,13368,13573,13710,14120,15131,15304,15744,15853,15918,16479,17140,17189,17688,17830,18060,18436,18941,19104,20024,20446,20508,20692,21245,21572,21724,22166,22267,23265,24178,24521,24880,24883,26837,26890,28265,28278,28564,29050,29593,30317,31248,32212,33340,35058,35195,35543,36020,37377,37417,37761,37832,38410,38535,38662,38787,38886,38934,39417,39468,39984,40087,42620,43816,44122,44256,44376,44795,44848,45236,45610,45906,46698,47535,47575,48495,48556,48688,48888,49261,49306,49507,49615,50685,51296,51756,51986,52184,53381,53460,53772,54281,54668,54983,55114,55124,55271,55551,57405,57498,58821,59607,59930,60493,60539,61593,61612,62466,63054,63605,63678,63990,64227,64389,64712,64996,65066"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.15" extrainfo="(CentOS) DAV/2 PHP/5.3.3" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.15</cpe></service><script id="http-title" output="Site doesn&apos;t have a title (text/html; charset=UTF-8)."></script><script id="http-robots.txt" output="3 disallowed entries &#xa;/cola /sisi /beer"/><script id="http-methods" output="&#xa;  Potentially risky methods: TRACE"><table key="Potentially risky methods">
+<elem>TRACE</elem>
+</table>
+</script><script id="http-server-header" output="Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3"><elem>Apache/2.2.15 (CentOS) DAV/2 PHP/5.3.3</elem>
+</script></port>
+</ports>
+<os><portused state="open" proto="tcp" portid="80"/>
+<osmatch name="Linux 2.6.32 - 3.10" accuracy="100" line="56574">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+<osmatch name="Linux 2.6.32 - 3.13" accuracy="100" line="56604">
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="2.6.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:2.6</cpe></osclass>
+<osclass type="general purpose" vendor="Linux" osfamily="Linux" osgen="3.X" accuracy="100"><cpe>cpe:/o:linux:linux_kernel:3</cpe></osclass>
+</osmatch>
+</os>
+<uptime seconds="9" lastboot="Sun Jan  9 02:37:49 2022"/>
+<distance value="1"/>
+<tcpsequence index="256" difficulty="Good luck!" values="F87E605A,19C651A,E14A139C,DB2F383D,9476A92B,B012BBDD"/>
+<ipidsequence class="All zeros" values="0,0,0,0,0,0"/>
+<tcptssequence class="1000HZ" values="1E63,1EC7,1F2D,1F91,1FF6,205B"/>
+<trace>
+<hop ttl="1" ipaddr="192.168.1.45" rtt="0.52"/>
+</trace>
+<times srtt="523" rttvar="54" to="100000"/>
+</host>
+<runstats><finished time="1641713878" timestr="Sun Jan  9 02:37:58 2022" summary="Nmap done at Sun Jan  9 02:37:58 2022; 1 IP address (1 host up) scanned in 163.54 seconds" elapsed="163.54" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

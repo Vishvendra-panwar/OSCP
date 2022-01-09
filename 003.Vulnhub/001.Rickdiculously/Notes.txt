@@ -282,4 +282,24 @@ safe                                                                            
 FLAG.txt                                                                          100%   48    52.7KB/s   00:00   
 
 
+======================= Port 9090 =================================================
+
+┌──(root💀kali)-[/home/…/OSCP/003.Vulnhub/001.Rickdiculously/port.9090]
+└─# gobuster dir -k --wordlist /usr/share/wordlists/dirb/common.txt -u https://192.168.1.41:9090 -o gobuster.txt           
+===============================================================
+Gobuster v3.1.0
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     https://192.168.1.41:9090
+[+] Method:                  GET
+[+] Threads:                 10
+[+] Wordlist:                /usr/share/wordlists/dirb/common.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.1.0
+[+] Timeout:                 10s
+===============================================================
+2022/01/08 01:35:28 Starting gobuster in directory enumeration mode
+===============================================================
+Error: the server returns a status code that matches the provided options for non existing urls. https://192.168.1.41:9090/0ac94a0c-0cbb-46be-a5b6-a2e0b00bf915 => 200 (Length: 41766). To continue please exclude the status code, the length or use the --wildcard switch
+
 
